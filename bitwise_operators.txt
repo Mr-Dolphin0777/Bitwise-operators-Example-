@@ -1,0 +1,90 @@
+Bitwise operators do bitwise manipulation
+
+& = AND
+| = OR
+~ = NOT
+<< = Left shift
+>> = Right shift
+^ = XOR
+
+
+& (AND): The AND operator takes two bits at a time an performs the AND operation the result of AND is 1 when both bits are 1. Example:
+
+7 ->  0111		  AND TABLE
+4 -> &0100		A----B--A&B	
+=				0	 0	 0
+4 <- 0100		0	 1	 0
+				1	 0	 0
+7 & 4 = 4		1	 1	 1
+
+
+| (OR): The OR operator takes two numbers A and B an then proceeds to perform bitwise OR the result of OR is 0 when both bits are 0 if lets say bit A is 1 an bit B is 0 then it would be 1.
+Example:
+
+7 ->  0111		  OR TABLE
+4 -> |0100		A -- B -- A|B		
+=		  		0    0     0
+7 <-- 0111		0    1     1
+				1    0	   1
+7 | 4 = 7		1    1     1
+
+
+~ (NOT): The NOT operator is a unary operator which means it requires just one operant it;s job is to complement each bit one by one. Example:
+
+7 -> ~0111     NOT TABLE
+8 <-  1000	   A -- ~A
+			   0     1	
+~7 = 8 		   1     0
+
+<< (Left shit) A(1st operand whose bits get left shited) << B(2nd operand decides the number op places to shit the bits). When bits are shited left the trailing positions are filled with zeros.
+Example:
+
+----------------EXAMPLE PROGRAM (.c)-------------------
+#include <stdioh.>
+
+int main(void) {
+	char var = 3;  //3 in binary = 0000 0011
+	printf("%d", var << 1);
+}
+-------------------------------------------------------
+
+so with "var << 1" it will left shit '1st operand': 3, by 1 to the left '2nd operand': 1, 
+answer will be '0000 0110': 6.
+Left shifting is basically equivalent to multiplying the first operand by 2 raised to the power of (Second operand):
+
+3 << 1 Output: 6 (3 * 2(1)) <- This (1) is "to the power of" meaning
+
+3 << 4 Output: 48 (3 * 2(4)) <- This (4) is "to the power of" meaning
+2 raised to the power of 4 is 16 then once you times that by 3 you get: 48
+
+>> (Right shift): A(First operand which bits get right shifted) >> B(Second operand decides the number of places to shift the bits). When bits are shited right the trailing positions are filled with zeros, like with left shift operator.
+Example: 
+
+----------------EXAMPLE PROGRAM (.c)-------------------
+#include <stdio.h>
+
+int main(void) {
+	char var = 3 // 3 in binary = 0000 0011
+	printf("%d", var >> 1); 
+}
+-------------------------------------------------------
+
+With "var >> 1" it will right shit '1st operand': 3, by 1 to the right '2nd operand': 1, resulting in '0000 0001': 1 because all "trailing positions are filled with zeros".
+
+Right shifting is basically equivalent to dividing the first operand by 2 raised to the power of (Second operand):
+
+3 >> 1 Output: 1 (3 / 2(1)) <- This (1) is "to the power of" meaning
+
+32 >> 4 Output: 2 (32 / 2(4)) <- This (4) is "to the power of" meaning
+2 raised to the power of 4 ,the right operand aka second operand,  which is 16 then you divide 32 by 16 , 32 being the left operand aka the first operand, which then gives you the answer of 2 
+
+
+^ (XOR): Well XOR is just Exlusive OR, an it is useful to look at Inclusive OR (|->OR), the only difference with XOR is if A = 1 and B = 1 if you were to A ^ B it would be 0, with OR if A were to equal 1 an B the same the output would just be 1
+Example: 
+
+7 ->  0111   	XOR TABLE
+4 -> ^0100		A   B   A^B
+		 		0	0    0	
+3 <- 0011		0   1    1
+				1   0    1
+7 ^ 4 = 3		1   1    0
