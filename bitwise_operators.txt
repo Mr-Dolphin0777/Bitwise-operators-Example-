@@ -31,7 +31,7 @@ Example:
 
 ~ (NOT): The NOT operator is a unary operator which means it requires just one operant it;s job is to complement each bit one by one. Example:
 
-7 -> ~0111     NOT TABLE
+7 -> ~0111        NOT TABLE
 8 <-  1000	   A -- ~A
 	           0     1	
 ~7 = 8 		   1     0
@@ -82,7 +82,7 @@ Right shifting is basically equivalent to dividing the first operand by 2 raised
 ^ (XOR): Well XOR is just Exlusive OR, an it is useful to look at Inclusive OR (|->OR), the only difference with XOR is if A = 1 and B = 1 if you were to A ^ B it would be 0, with OR if A were to equal 1 an B the same the output would just be 1
 Example: 
 
-7 ->  0111   	XOR TABLE
+7 ->  0111   	         XOR TABLE
 4 -> ^0100		A   B   A^B
 		        0   0    0	
 3 <- 0011		0   1    1
