@@ -10,11 +10,11 @@ Bitwise operators do bitwise manipulation
 
 & (AND): The AND operator takes two bits at a time an performs the AND operation the result of AND is 1 when both bits are 1. Example:
 
-7 ->  0111		  AND TABLE
-4 -> &0100		A----B--A&B	
-=				0	 0	 0
+7 ->  0111		     AND TABLE
+4 -> &0100		A        B       A&B	
+=			0	 0	 0
 4 <- 0100		0	 1	 0
-				1	 0	 0
+		        1	 0	 0
 7 & 4 = 4		1	 1	 1
 
 
@@ -23,9 +23,9 @@ Example:
 
 7 ->  0111		  OR TABLE
 4 -> |0100		A -- B -- A|B		
-=		  		0    0     0
+=		  	0    0     0
 7 <-- 0111		0    1     1
-				1    0	   1
+			1    0	   1
 7 | 4 = 7		1    1     1
 
 
@@ -33,7 +33,7 @@ Example:
 
 7 -> ~0111     NOT TABLE
 8 <-  1000	   A -- ~A
-			   0     1	
+	           0     1	
 ~7 = 8 		   1     0
 
 << (Left shit) A(1st operand whose bits get left shited) << B(2nd operand decides the number op places to shit the bits). When bits are shited left the trailing positions are filled with zeros.
@@ -84,7 +84,7 @@ Example:
 
 7 ->  0111   	XOR TABLE
 4 -> ^0100		A   B   A^B
-		 		0	0    0	
+		        0   0    0	
 3 <- 0011		0   1    1
-				1   0    1
+			1   0    1
 7 ^ 4 = 3		1   1    0
